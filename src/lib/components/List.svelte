@@ -23,7 +23,6 @@ let {title, list = []} : {title: string, list: string[]} = $props();
     .list-title{
         font-size: 2em;
         color: var(--on-surface);
-        margin: .5em 0;
     }
     .list-item{
         background-color: var(--primary);

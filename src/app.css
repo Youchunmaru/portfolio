@@ -72,6 +72,10 @@ button:focus-visible {
   outline: .5em auto -webkit-focus-ring-color;
 }
 
+p {
+  margin: 0;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --primary-hover: #747bff;

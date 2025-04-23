@@ -1,12 +1,17 @@
 <script lang="ts">
-    let {title, list = []}: {title: string, list: string[]} = $props();
+    import kotlin from '../../assets/kotlin.png';
+    import type { Technology } from '../model/Technology';
+    let {title, list = []}: {title: string, list: Technology[]} = $props();
 </script>
 
 <div class="group">
     <p class="group-title">{title}</p>
     <div class="group-content">
         {#each list as item}
-            <p class="group-item">{item}</p>
+        <div class="group-item" title={item.getLevel()}>
+            <img src={item.getLogo()} alt={item.getName()}>
+            <p>{item.getName()}</p>
+        </div>
         {/each}
     </div>
 </div>
@@ -22,11 +27,14 @@
         display: flex;
         flex-wrap: wrap;
     }
+    .group-content img{
+        width: 2em;
+        height: 2em;
+    }
     .group-title{
         font-size: 2em;
         color: var(--on-surface);
         justify-self: start;
-        margin: .5em 0;
     }
     .group-item{
         background-color: var(--primary);
@@ -34,5 +42,9 @@
         color: var(--on-primary);
         margin: .5em;
         padding: .5em;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        align-items: center;
     }
 </style>

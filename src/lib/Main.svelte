@@ -3,6 +3,9 @@ import { onMount } from 'svelte';
 import { Application } from 'pixi.js';
     import List from './components/List.svelte';
     import Group from './components/Group.svelte';
+    import { Technology } from './model/Technology';
+    import { Level } from './model/Level';
+    import kotlin from "../assets/kotlin.png"
 
 /*onMount(() => {
     console.log('App mounted');
@@ -18,13 +21,14 @@ import { Application } from 'pixi.js';
         });
     }
 });*/
+const tech = new Technology("Kotlin", kotlin, Level.BEGINNER);
 </script>
 
 <main id="pixi" class="game">
 
 </main>
 
-<Group title="Languages" list={["Kotlin", "Java", "JavaScript", "TypeScript"]}/>
+<Group title="Languages" list={[tech]}/>
 <List title="Languages" list={["Kotlin", "Java", "JavaScript", "TypeScript"]}/>
 <style>
     .game{
