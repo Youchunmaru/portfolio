@@ -1,0 +1,77 @@
+{
+    "firstname": "Samuel",
+    "lastname": "Gröner",
+    "location": "Ulm - Germany",
+    "socials": [
+        {
+            "name": "GitHub",
+            "link": ""
+        },
+        {
+            "name": "Email",
+            "link": ""
+        },
+        {
+            "name": "Instagram",
+            "link": ""
+        }
+    ],
+    "techstack":[
+        {
+            "name": "languages",
+            "stack": [
+                {
+                    "name": "Java",
+                    "level": "Advanced"
+                },
+                {
+                    "name": "Kotlin",
+                    "level": "Intermediate"
+                },
+                {
+                    "name": "JavaScript",
+                    "level": "Intermediate"
+                },
+                {
+                    "name": "TypeScript",
+                    "level": "Intermediate"
+                },
+                {
+                    "name": "C#",
+                    "level": "Beginner"
+                }
+            ]
+        },
+        {
+            "name": "Frameworks",
+            "stack": [
+                {
+                    "name": "Svelte",
+                    "level": "Beginner"
+                },
+                {
+                    "name": "Spring",
+                    "level": "Beginner"
+                }
+            ]
+        },
+        {
+            "name": "Databases",
+            "stack": [
+                {
+                    "name": "MySql",
+                    "level": "Intermediate"
+                }
+            ]
+        },
+        {
+            "name": "Tooling",
+            "stack": [
+                {
+                    "name": "Git",
+                    "level": "Beginner"
+                }
+            ]
+        }
+    ]
+}

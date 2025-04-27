@@ -1,5 +1,4 @@
 <script lang="ts">
-    import kotlin from '../../assets/kotlin.png';
     import type { Technology } from '../model/Technology';
     let {title, list = []}: {title: string, list: Technology[]} = $props();
 </script>

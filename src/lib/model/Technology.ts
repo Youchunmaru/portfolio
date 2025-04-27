@@ -6,7 +6,7 @@ export class Technology {
     private readonly logo: string;
     private readonly level: Level;
 
-    constructor(name: string, logo: string, level: Level) {
+    constructor(name: string, level: Level, logo: string = "") {
         this.name = name;
         this.logo = logo;
         this.level = level;
