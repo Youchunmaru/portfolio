@@ -18,13 +18,13 @@
 				<Mail size={20} />
 				<span>{personalInfo.email}</span>
 			</a>
-			<div class="flex items-center justify-center space-x-3 text-text-primary">
+			<!--<div class="flex items-center justify-center space-x-3 text-text-primary">
 				<Phone size={20} />
 				<span>{personalInfo.phone[0].number}</span>
-			</div>
+			</div>-->
 			<div class="flex items-center justify-center space-x-3 text-text-primary">
 				<MapPin size={20} />
-				<span>{personalInfo.address.street}</span>
+				<span>{personalInfo.address.city} / {personalInfo.address.state}</span>
 			</div>
 		</div>
 	</div>

@@ -8,7 +8,7 @@
 		{#each otherExperience as item}
 			<div class="mb-6 last:mb-0">
 				<h3 class="text-xl font-semibold text-accent mb-2">{item.name}</h3>
-				<p class="text-text-secondary leading-relaxed">{item.description}</p>
+				<p class="text-text-secondary leading-relaxed">{@html item.description}</p>
 			</div>
 		{/each}
 	</div>

@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { experiences } from '../model/Data';
+	import { experiences as experiences_data } from '../model/Data';
 	import Section from './Section.svelte';
+	const experiences = experiences_data.sort((a, b) => b.startDate.getTime() - a.startDate.getTime());
 </script>
 
 <Section id="experience" title="Experience & Education">
@@ -16,14 +17,14 @@
 						<Briefcase class="text-accent" size={20} />
 					{/if}-->
 				</div>
-				<p class="text-sm text-text-secondary">{exp.startDate}</p>
-				<h3 class="text-xl font-bold mt-1">{exp.qualification}</h3>
+				<p class="text-sm text-text-secondary">{exp.startDate.toLocaleDateString('en-us',{month: 'short', year: 'numeric'})} {exp.endDate ? " - " + (exp.endDate.toLocaleDateString(undefined,{month: 'short', year: 'numeric'})) : " - Present"}</p>
+				<h3 class="text-xl font-bold mt-1">{exp.title} | {exp.qualification}</h3>
 				<p class="text-md text-text-primary mb-2">{exp.school}</p>
-				<ul class="list-disc list-inside text-text-secondary space-y-1">
+				<div class="list-disc list-inside text-text-secondary space-y-1">
 					<!--{#each exp.description as desc}-->
-						<li>{exp.description}</li>
+						<p>{@html exp.description}</p>
 					<!--{/each}-->
-				</ul>
+				</div>
 			</div>
 		{/each}
 	</div>
